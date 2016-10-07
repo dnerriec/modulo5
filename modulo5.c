@@ -1,7 +1,9 @@
 #include <stdio.h>
 
+/* inserted in GitHub October, 7th */
+ 
 /*
- * Calcul de modulo 5 sans utliser l'opérateur "%" ni "/" 
+ * Calcul de modulo 5 sans utliser l'opÃ©rateur "%" ni "/" 
  * (pas de division dans processeur ARM)
  *
  * On fait une division par 5 en multipliant par une fraction
@@ -10,20 +12,20 @@
  *   - dont le diviseur une puissance de 2
  *
  * La division par une puissance de 2 est une division entiere, 
- * elle se fait par décalage de bits.
+ * elle se fait par dÃ©calage de bits.
  * 
  *                        i * M
  * i modulo 5 =  i  -  -------------- * 5
  *                       2 exp N
  *
  * avec M = 2 exp N / 5
- * (valeur approchée par excès)
+ * (valeur approchÃ©e par excÃ¨s)
  * 
  * Deux dangers : 
- *    -  i * M    dépasse la capacité du processeur  (d'ou l'utilisation de "unsigned" pour doubler le max)
+ *    -  i * M    dÃ©passe la capacitÃ© du processeur  (d'ou l'utilisation de "unsigned" pour doubler le max)
  *    -  l'erreur sur "i * M" (du fait que M est un arrondi)
  *       Les plus petits "i" qui provoquent l'erreur sont ceux dont le modulo est 4
- *       Si "i * M" est surévalué d' 1 cinquieme de "2 exp N" (autrement dit si l'erreur est de   au moins M)
+ *       Si "i * M" est surÃ©valuÃ© d' 1 cinquieme de "2 exp N" (autrement dit si l'erreur est de   au moins M)
  *       le resultat de la division donne 1 de trop
  */
 
@@ -40,9 +42,9 @@ int main (int argc, char *argv[])
     // Valeurs qui permettent de calculer le plus de modulo : 
     modulo = i - ((i*52429)>>18)*5; // 2 exp 18  / 5 = 52428.8
 
-    // (ok jusqu'à i=81919)
+    // (ok jusqu'Ã  i=81919)
     // 81919 * 52429 = 0xFFFF7333
-    // On note que l'erreur du à l'arrondi (52429 au lieu de 52428.8) est de 0.2 * 81919 = 16383.8
+    // On note que l'erreur du Ã  l'arrondi (52429 au lieu de 52428.8) est de 0.2 * 81919 = 16383.8
     // reste inferieure a 52429, donc pas de pb.
 
     if (modulo == i%5)
@@ -146,7 +148,7 @@ int main (int argc, char *argv[])
 
 #ifdef IDEE_OCTET_PAR_OCTET
 pas fini...
-pourrait etre combiné avec la solution " i - i * M / 2expN * 5"
+pourrait etre combinÃ© avec la solution " i - i * M / 2expN * 5"
 (en travaillant sur les 16 eb de poids fort d'abord ??)
 
 
