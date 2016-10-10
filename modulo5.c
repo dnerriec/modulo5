@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /* inserted in GitHub October, 7th */
-/* insere par nedit BRANCHE A */
+/* insere par nedit BRANCHE A - 2eme modif dans A */
  
 /*
  * Calcul de modulo 5 sans utliser l'operateur "%" ni "/" 
