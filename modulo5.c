@@ -1,9 +1,10 @@
 #include <stdio.h>
 
 /* inserted in GitHub October, 7th */
+/* insere par nedit BRANCHE A */
  
 /*
- * Calcul de modulo 5 sans utliser l'opérateur "%" ni "/" 
+ * Calcul de modulo 5 sans utliser l'operateur "%" ni "/" 
  * (pas de division dans processeur ARM)
  *
  * On fait une division par 5 en multipliant par une fraction
@@ -12,7 +13,7 @@
  *   - dont le diviseur une puissance de 2
  *
  * La division par une puissance de 2 est une division entiere, 
- * elle se fait par décalage de bits.
+ * elle se fait par decalage de bits.
  * 
  *                        i * M
  * i modulo 5 =  i  -  -------------- * 5
