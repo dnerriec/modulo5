@@ -216,3 +216,5 @@ x2 = x & 255 + m * 256
 refaire 1ere partie avec x2
 }
 #endif
+
+/* insere dans main en parallele de la modif dans branche A */
