@@ -20,7 +20,7 @@
  *                       2 exp N
  *
  * avec M = 2 exp N / 5
- * (valeur approchée par excès)
+ * (valeur approche par excs)
  * 
  * Deux dangers : 
  *    -  i * M    depasse la capacite du processeur  (d'ou l'utilisation de "unsigned" pour doubler le max)
@@ -43,9 +43,9 @@ int main (int argc, char *argv[])
     // Valeurs qui permettent de calculer le plus de modulo : 
     modulo = i - ((i*52429)>>18)*5; // 2 exp 18  / 5 = 52428.8
 
-    // (ok jusqu'à i=81919)
+    // (ok jusqu' i=81919)
     // 81919 * 52429 = 0xFFFF7333
-    // On note que l'erreur du à l'arrondi (52429 au lieu de 52428.8) est de 0.2 * 81919 = 16383.8
+    // On note que l'erreur du  l'arrondi (52429 au lieu de 52428.8) est de 0.2 * 81919 = 16383.8
     // reste inferieure a 52429, donc pas de pb.
 
     if (modulo == i%5)
@@ -149,7 +149,7 @@ int main (int argc, char *argv[])
 
 #ifdef IDEE_OCTET_PAR_OCTET
 pas fini...
-pourrait etre combiné avec la solution " i - i * M / 2expN * 5"
+pourrait etre combin avec la solution " i - i * M / 2expN * 5"
 (en travaillant sur les 16 eb de poids fort d'abord ??)
 
 
