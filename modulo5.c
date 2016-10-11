@@ -2,7 +2,7 @@
 
 /* inserted in GitHub October, 7th */
 /* insere par nedit BRANCHE A - 2eme modif dans A */
- 
+/* ici ca fritte ,  master */ 
 /*
  * Calcul de modulo 5 sans utliser l'operateur "%" ni "/" 
  * (pas de division dans processeur ARM)
@@ -23,10 +23,10 @@
  * (valeur approchée par excès)
  * 
  * Deux dangers : 
- *    -  i * M    dépasse la capacité du processeur  (d'ou l'utilisation de "unsigned" pour doubler le max)
+ *    -  i * M    depasse la capacite du processeur  (d'ou l'utilisation de "unsigned" pour doubler le max)
  *    -  l'erreur sur "i * M" (du fait que M est un arrondi)
  *       Les plus petits "i" qui provoquent l'erreur sont ceux dont le modulo est 4
- *       Si "i * M" est surévalué d' 1 cinquieme de "2 exp N" (autrement dit si l'erreur est de   au moins M)
+ *       Si "i * M" est surevalue d' 1 cinquieme de "2 exp N" (autrement dit si l'erreur est de   au moins M)
  *       le resultat de la division donne 1 de trop
  */
 
