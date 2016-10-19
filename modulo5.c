@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/* 
+ * Essai branche distante
+ *  (branche sauvegardee sur github)
+ */
+
 /* inserted in GitHub October, 7th */
 /* insere par nedit BRANCHE A - 2eme modif dans A */
 /* ici ca fritte ,  master */ 
