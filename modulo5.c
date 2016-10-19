@@ -3,6 +3,7 @@
 /* 
  * Essai branche distante
  *  (branche sauvegardee sur github)
+ * Modif sur github dans essbrch1
  */
 
 /* inserted in GitHub October, 7th */
